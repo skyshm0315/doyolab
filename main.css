@@ -24,13 +24,19 @@ figure img {
     height: 200px;
     object-fit: cover; /* 画像のトリミング */
 }
-figcaption {
+figcaption 
     width: 150px;
     height: 80px;
     font-size: 0.9em;        /* 文字サイズを90%に */
     text-align: center;      /* 中身をセンタリング */
     word-wrap: break-word;
 }
+.version {
+    color: white;
+}
+ 
+    
+
 /* ---------------------------------------------------------------------------*/
 
 
