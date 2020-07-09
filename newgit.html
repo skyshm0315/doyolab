@@ -28,7 +28,7 @@
         <h2>■作るまでの流れ</h2>
            <p>今回は完成までの流れを<a href="https://hnavi.co.jp/knowledge/blog/development_process/">このサイト</a>や授業で教わった記憶をたどりながらやっていきたいと思う。<br>
             大まかに<br><br>
-               １用件定義→どんな機能をつけるか<br>
+               １要件定義→どんな機能をつけるか<br>
                ２外部設計→どんな見た目か<br>
                ３内部設計→中でどう動くか<br>
                ４プログラミング→実際にコードを書く<br>
@@ -62,7 +62,15 @@
     </p>
     <p>htmlの中から特定の要素を取得<br>
         <img src="images/python2.png" width="60%">
+   <br>解決したエラー
+        <img src="images/sutikaSippai.png" width="60%">
+    <br>このようにエラーがでてしまった。理由はselectという機能は該当するすべてのものを取り出すものだから。データの型がresultsetというものになる。
+    <br>そのために、select_oneを使うか、以下の画像の様にselectにはforを使った繰り返し文を使わないといけない。
+    <br>エラー文の最後に書いてあるように、find_allとfindの間にも同様の関係がある。
+    <br><img src="images/sutikaseikou.png" width="60%">
     </p>
+    <p>csvファイルから数値を取り出して比較
+    <br><img src="images/csvtest.png"></p>
             
                 
 
