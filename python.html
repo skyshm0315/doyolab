@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>gitの話</title>
+    <title>pythonについて</title>
     
     <link rel="stylesheet" href="main.css">
 </head>
@@ -16,19 +16,31 @@
     </logotohome>
 
     <!--h1は見出し１（大見出し）-->
-    <h1>gitの現状</h1>
-    <p>
-        ゼミ生みんなの進捗状況を確認するには、いちいちurlを踏まなくてはならない。<br>
-    全員のを確認するのにurlを40回踏む必要がある。<br>
-    gitをなかなか更新しない人のサイトを確認する作業は特に無駄になってしまう。(ごめんなさい)<br>
-    この状態だと知識の共有に繋がりづらい。また興味のある分野の先行している先輩の情報を探すのに苦労してしまう。<br><br>
-    <strong>どうにかしたい</strong>
-    </p> 
-        <!--h2は見出し2（中見出し）-->
-        <h2>■作るまでの流れ</h2>
-           <p>今回は完成までの流れを<a href="https://www.amazon.co.jp/%E3%82%B7%E3%82%B9%E3%83%86%E3%83%A0%E9%96%8B%E7%99%BA%E3%82%92%E3%82%88%E3%82%8A%E9%80%9F%E3%81%8F%E7%A2%BA%E5%AE%9F%E3%81%AB-%E6%9C%AC%E5%BD%93%E3%81%AB%E4%BD%BF%E3%81%88%E3%82%8B%E9%96%8B%E7%99%BA%E3%83%97%E3%83%AD%E3%82%BB%E3%82%B9-%E6%94%B9%E8%A8%82%E7%89%88-%E5%B2%A1-%E5%A4%A7%E5%8B%9D/dp/4822256987/ref=pd_lpo_14_t_0/357-9376464-9539026?_encoding=UTF8&pd_rd_i=4822256987&pd_rd_r=dab914e0-31af-407c-a67a-5153b6f6747b&pd_rd_w=drc1G&pd_rd_wg=nZ3jo&pf_rd_p=4b55d259-ebf0-4306-905a-7762d1b93740&pf_rd_r=65MFDCVYVDKF6HGD6PKX&psc=1&refRID=65MFDCVYVDKF6HGD6PKX">本当に使える開発プロセス</a>を読みながら一応沿ってやっていきたいと思う。<br>
-    (僕はkindleunlimitedという定額で本が読み放題のサービスに入っていて、どの分野でも一冊は関連図書があるのでお勧めです。)</p>
-
+    <h1>pythonについて</h1>
+    <p>pythonについて僕は『スラスラ読めるpythonふりがなプログラミングという<br>
+    本を読みながらやったが基本的な内容だったためかこの本にのっていないことが結構あったので、それをまとめようと思う。
+    </p>
+    <h2>データの型</h2>
+    <p>プログラミングを少しでも触ったことがある人は知っていると思うがどんな文字列にもデータの種類が決まっている。
+    <br>文字列であれば文字列という意味のstringから前の三文字をとったstrと表示されるし、
+    <br>数値であればintegerの前三文字のintと表示される。
+    <br>ここまでは教科書に載っているところだが、beautifulsoup4の様に外部ライブラリを使う場合注意が必要だ。
+    <br>
+    <img src="images/python1html.png" >
+    <br>このようなコードを書くと変数latestVersionの中身は
+    <br><img src="images/pythonhtml2.png">
+    <br>これだと数値として扱えない。またデータの型がbs4.element.Tagとなっているからここから操作できない。（数値を比べたり)
+    <br>そこで今回に関してはrequestsというライブラリを使ってlatestVersion.textと書くと中身だけを取り出すことができる。
+    <br>大事なことは、常に変数の中身がどうなっているかを確認することが大事だと思う！
+    <br>ちなみにデータの型はpythonだとtype(変数)で調べることができる。
+    </p>
+    <h2>関数のローカルスコープ</h2>
+    <p><img src="images/pythonhtml3.png">
+    <br>このように関数内で定義した変数は関数の外で使うことができない。print(a)と実行しても
+    <br>NameError: name 'a' is not definedと出てきてaが定義されてないといわれてしまう。
+    <br>もし関数内で計算した変数を外で使いたい場合には、
+    <br><img src="images/pythonhtml4.png">
+    <br>とうつことで関数の外でも扱うことができる</p>
             
                 
 
